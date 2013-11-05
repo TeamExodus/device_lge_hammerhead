@@ -125,10 +125,6 @@ TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/lge/hammerhead/power/power_ext.c
 USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
 USE_DEVICE_SPECIFIC_CAMERA:= true
 
-# Recovery
-RECOVERY_FSTAB_VERSION := 2
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 # Flags
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
@@ -142,3 +138,29 @@ USE_MINIKIN := true
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
+
+# Exodus Recovery: Header
+RECOVERY_VARIANT := exodus
+
+# Exodus Recovery: Crypto
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_JB_CRYPTO := false
+TW_INCLUDE_L_CRYPTO := true
+
+# Exodus Recovery: Display
+DEVICE_RESOLUTION := 1080x1920
+TW_THEME := portrait_hdpi
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+
+# Exodus Recovery: Storage
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_NO_USB_STORAGE := true
+
+# Exodus Recovery: Slow flash fix
+BOARD_SUPPRESS_SECURE_ERASE := true
+
+# Exodus Recovery: Brightness
+TW_BRIGHTNESS_PATH := "/sys/devices/mdp.0/qcom\x2cmdss_fb_primary.160/leds/lcd-backlight/brightness"
+TW_MAX_BRIGHTNESS := 255
