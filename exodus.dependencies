@@ -1,10 +1,14 @@
 [
  {
-   "repository": "android_kernel_lge_hammerhead",
+   "repository": "Exodus-Kernels/lge_hammerhead",
    "target_path": "kernel/lge/hammerhead"
  },
  {
-   "repository": "android_device_qcom_common",
+   "repository": "Exodus-Devices/qcom_common",
    "target_path": "device/qcom/common"
+ },
+ {
+   "repository": "Exodus-Vendors/lge_hammerhead",
+   "target_path": "vendor/lge/hammerhead"
  }
 ]
