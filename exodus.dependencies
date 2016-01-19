@@ -4,10 +4,6 @@
    "target_path": "kernel/lge/hammerhead"
  },
  {
-   "repository": "Exodus-Devices/qcom_common",
-   "target_path": "device/qcom/common"
- },
- {
    "repository": "Exodus-Vendors/lge_hammerhead",
    "target_path": "vendor/lge/hammerhead"
  }
